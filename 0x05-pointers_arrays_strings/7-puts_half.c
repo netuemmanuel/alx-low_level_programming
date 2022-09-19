@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * puts_half - prints half of a string
+ * print_array - prints half - prints half of a string
  * @str: input
  * Return: half the input
  */
@@ -22,6 +21,4 @@ void puts_half(char *str)
 		_putchar(*str);
 		str++;
 	}
-
-	_putchar('\n');
 }
