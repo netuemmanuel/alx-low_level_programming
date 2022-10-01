@@ -14,4 +14,3 @@ int main(int args, char *argv[])
 	(void)argv;
 	return (0);
 }
-	
