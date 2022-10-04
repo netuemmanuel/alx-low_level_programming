@@ -27,31 +27,31 @@ int len(char *str)
 
 char *argstostr(int ac, char **av)
 {
-	char *new_string = NULL;
-	int k = 0, i = ac, j, sum = 0, temp = 0;
+		char *new_string = NULL;
+		int k = 0, i = ac, j, sum = 0, temp = 0;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
+		if (ac == 0 || av == NULL)
+			return (NULL);
 
-	while (ac--)
-		sum += (len(ac[av]) + 1);
-	new_string = (char *) malloc(sum + 1);
+		while (ac--)
+			sum += (len(ac[av]) + 1);
+		new_string = (char *) malloc(sum + 1);
 
-	if (new_string != NULL)
-	{
-		while (k < i)
+		if (new_string != NULL)
 		{
-			for (j = 0; av[k][j] != '\0'; j++)
-				new_string[j + temp] = av[k][j];
-			new_string[temp + j] = '\n';
-			temp += (j + 1);
-			k++;
+			while (k < i)
+			{
+				for (j = 0; av[k][j] != '\0'; j++)
+					new_string[j + temp] = av[k][j];
+				new_string[temp + j] = '\n';
+				temp += (j + 1);
+				k++;
+			}
+			new_string[temp] = '\0';
 		}
-		new_string[temp] = '\0';
-	}
-	else
-	{
-		return (NULL);
-	}
-	return (new_string);
+		else
+		{
+			return (NULL);
+		}
+		return (new_string);
 }
